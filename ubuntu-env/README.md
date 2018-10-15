@@ -1,6 +1,6 @@
 ## ubuntu-env
 
-This repository is using for building Ubuntu Linux environment.
+This Dockerfile is using for building Ubuntu Linux environment.
 
 ---
 ### Usage
@@ -10,6 +10,18 @@ This repository is using for building Ubuntu Linux environment.
 * Pull Docker image
     ```bash
     $ docker pull yungshenglu/ubuntu-env
+    ```
+* Build Docker image with Dockerfile
+    ```bash
+    $ docker build -f Dockerfile -t <IMAGE_NAME> .
+    ```
+* Run Docker container in privileged mode
+    ```bash
+    $ docker run -d -p <PORT>:22 --privileged --name <CONTAINER_NAME> <IMAGE_NAME> > /dev/null
+    ```
+* List port 22 mapping on Docker container
+    ```bash
+    $ docker port <CONTAINER_NAME> 22
     ```
 
 ---
