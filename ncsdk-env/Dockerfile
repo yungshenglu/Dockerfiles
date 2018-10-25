@@ -3,48 +3,44 @@ FROM yungshenglu/ubuntu-env:16.04
 # Update packages
 RUN apt-get update
 
-# Proxy
-ARG http_proxy
-ENV http_proxy ${http_proxy}
+# Install software repository
+RUN apt-get install -y \
+    lsb-release \
+    build-essential \
+    sed \
+    sudo \
+    tar \
+    udev \
+    libusb-1.0-0-dev
 
-ARG https_proxy
-ENV https_proxy ${https_proxy}
+# Clear out the local repository of retrieved packages
+RUN apt-get clean
 
-RUN echo ${http_proxy}
-RUN echo ${https_proxy}
+# Set the entrypoint
+CMD ["/usr/sbin/sshd", "-D"]
 
-# Update and upgrade packages
-RUN apt-get update
-RUN apt-get -y upgrade
+# Copy over the NCSDK
+COPY ./ncsdk ncsdk/
 
-# Install packages
-RUN apt-get -y install build-essential udev sudo lsb-release usbutils
-RUN apt-get clean all
+# Set the current working directory to the cloned ncsdk directory
+WORKDIR "/ncsdk"
 
-# Add Movidius user
-RUN useradd -c "Movidius User" -m movidius
-COPY 10-installer /etc/sudoers.d
-RUN mkdir -p /etc/udev/rules.d
-USER movidius
-
-# Clone the repository of NCSDK from GitHub
-WORKDIR /home/movidius
-RUN git clone https://github.com/movidius/ncsdk.git
-
-# Install NCSDK
-WORKDIR /home/movidius/ncsdk
+# Run the installer
 RUN make install
-RUN make examples
+WORKDIR "api/src"
+RUN sudo make get_mvcmd && sudo make basicinstall NO_BOOT=yes NO_RESET=yes && sudo make pythoninstall
+WORKDIR "../../"
 
-# Assign password to create image
-RUN echo 'root:1111' | chpasswd
+# Use argument to assign passwd to create image
+RUN echo 'root:movidius' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-# SSH login
+# SSH login fix. Otherwise user will kicked off after login
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
-ENV NOTVISIBLE "in users profile"
+# Set the environment variables
+ENV NOTVISIBLE "in user profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
+# Set the container listens on the specified ports at runtime
 EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
