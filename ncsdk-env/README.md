@@ -1,9 +1,9 @@
-## movidius-env
+# ncsdk-env
 
 This repository is using for building Movidius environment on Ubuntu Linux 16.04 (only supported).
 
 ---
-### Usage
+## Usage
 
 * Before using this Docker image, make sure you have already installed Docker on your machine.
     * [Docker CE Installation](https://docs.docker.com/install)
@@ -11,12 +11,14 @@ This repository is using for building Movidius environment on Ubuntu Linux 16.04
     ```bash
     $ docker pull yungshenglu/movidius-env
     ```
+* 
 
 ---
-### Content
+## Content
 
 * Currently support:
-    * **Ubuntu Linux 16.04** (`movidius-env:16.04`)
+    * **Neural Compute SDK v2** (`ncsdk-env:v2`)
+    * **Ubuntu Linux 16.04** (`ubuntu-env:16.04`)
         * openssh-server
         * net-tools
         * iputils-ping
@@ -27,9 +29,8 @@ This repository is using for building Movidius environment on Ubuntu Linux 16.04
         * python-pip
         * powerline
         * tmux
-    * 
 
 ---
-### Contributor
+## Contributor
 
 * [David Lu](https://github.com/yungshenglu)

@@ -1,9 +1,9 @@
-## ubuntu-env
+# ubuntu-env
 
 This Dockerfile is using for building Ubuntu Linux environment.
 
 ---
-### Usage
+## Usage
 
 * Before using this Docker image, make sure you have already installed Docker on your machine.
     * [Docker CE Installation](https://docs.docker.com/install)
@@ -25,7 +25,7 @@ This Dockerfile is using for building Ubuntu Linux environment.
     ```
 
 ---
-### Content
+## Content
 
 * Currently support: **Ubuntu Linux 16.04** (`ubuntu-env:16.04`)
     * openssh-server
@@ -40,6 +40,6 @@ This Dockerfile is using for building Ubuntu Linux environment.
     * tmux
 
 ---
-### Contributor
+## Contributor
 
 * [David Lu](https://github.com/yungshenglu)
