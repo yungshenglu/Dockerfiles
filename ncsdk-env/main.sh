@@ -14,7 +14,7 @@ function build {
     # Build the image from Dockerfile
     docker build -f Dockerfile -t $1 .
     # Build the container named cn2018_c from the image named cn2018
-    docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --privileged --name $1"_c" $1 > /dev/null
+    docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --name $1"_c" $1 > /dev/null
     # List port 22 mapping on cn2018_c
     docker port $1"_c" 22
 }
