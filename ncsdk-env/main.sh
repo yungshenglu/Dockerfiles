@@ -12,7 +12,7 @@ function build {
     echo "[INFO] Docker image: $1"
     echo "[INFO] External port: $2"
     # Build the image from Dockerfile
-    docker build -f Dockerfile -t $1 .
+    docker build -f ./docker/Dockerfile -t $1 .
     # Build the container named cn2018_c from the image named cn2018
     docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --name $1"_c" $1 > /dev/null
     # List port 22 mapping on cn2018_c
@@ -30,7 +30,7 @@ function run {
 
     echo "[INFO] Run Docker container named $1 on port $2"
     # build from existed image
-    docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --privileged --name $1"_c" $1 > /dev/null
+    docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --name $1"_c" $1 > /dev/null
     # find which port mapping to 22
     docker port $1"_c" 22
 }
