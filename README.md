@@ -37,6 +37,11 @@ This repository is used to store my own Dockerfiles.
     ```
 
 ---
+## Contributing
+
+To know how to contribute this repository, please refer to this [document](CONTRIBUTING.md) first. Thanks for your cooperation.
+
+---
 ## Contributor
 
 * [David Lu](https://github.com/yungshenglu)
