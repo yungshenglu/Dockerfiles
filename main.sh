@@ -1,5 +1,5 @@
 #!/bin/bash -e
-#
+# Build the Docker container from the Dockerfile
 # CONTRIBUTOR: David Lu (https://github.com/yungshenglu)
 
 function build {
@@ -34,7 +34,7 @@ function run {
 
     echo "[INFO] Run Docker container named $1 on port $2"
     # build from existed image
-    docker run -d -p $2:22 --privileged --name $1"_c" $1 > /dev/null
+    docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --name $1"_c" $1 > /dev/null
     # find which port mapping to 22
     docker port $1"_c" 22
 }
