@@ -1,36 +1,41 @@
 # ubuntu-env
 
-This Dockerfile is using for building Ubuntu Linux environment.
+This Dockerfile is used to build Ubuntu Linux environment on Docker container.
 
 ---
 ## Usage
 
-* Before using this Docker image, make sure you have already installed Docker on your machine.
+> **NOTICE:** We provided a script file `main.sh` for you to help you to build the Docker container easily. The script file `main.sh` can be downloaded from [here](https://github.com/yungshenglu/Dockerfiles)!
+
+1. Before using this Dockerfile, make sure you have already installed Docker on your machine.
     * [Docker CE Installation](https://docs.docker.com/install)
-* Pull Docker image
+2. Use `main.sh` to build a Docker container
     ```bash
-    $ docker pull yungshenglu/ubuntu-env
+    # Make sure your current directory is in "./"
+    # Command format:
+    $ ./main.sh build <DOCKERFILE_PATH> <IMAGE_NAME> <EXTERNAL_PORT>
+    # Example: Use the Dockerfile in "./ubuntu-env/" and build a Docker image named "ubuntu-env" which externel port is 9487
+    $ ./main.sh build ./ubuntu-env/Dockerfile ubuntu-env 9487
     ```
-* Build Docker image with Dockerfile
+3. How to remove the container? (optional)
     ```bash
-    $ docker build -f Dockerfile -t <IMAGE_NAME> .
-    ```
-* Run Docker container in privileged mode
-    ```bash
-    $ docker run -d -p <PORT>:22 --privileged --name <CONTAINER_NAME> <IMAGE_NAME> > /dev/null
-    ```
-* List port 22 mapping on Docker container
-    ```bash
-    $ docker port <CONTAINER_NAME> 22
+    # Make sure your current directory is in "./"
+    # Command format:
+    $ ./main.sh clean <CONTAINER_NAME>
+    # Example: Remove the container named "ubuntu-env_c"
+    $ ./main.sh clean ubuntu-env_c
     ```
 
 ---
-## Content
+## Contents
 
-* Currently support: **Ubuntu Linux 16.04** (`ubuntu-env:16.04`)
+* **Ubuntu Linux 16.04 LTS (64-bit)** - `ubuntu-env:16.04`
     * openssh-server
     * net-tools
     * iputils-ping
+    * tcpdump
+    * iperf3
+    * sudo
     * git
     * vim
     * curl

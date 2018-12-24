@@ -1,16 +1,16 @@
 FROM ubuntu:16.04
 
-# Update packages
+# Update software repository
 RUN apt-get update
 
-# Install main packages
-RUN apt-get install -y net-tools iputils-ping git vim curl wget tmux
+# Install software repository
+RUN apt-get install -y net-tools iputils-ping git vim curl wget tmux sudo tcpdump iperf3
 
 # Install Python
 RUN apt-get -qqy install python-pip python-dev
 RUN export LC_ALL=C
 
-# Install powerline
+# Install Powerline
 RUN pip install --user git+git://github.com/Lokaltog/powerline
 RUN echo "" >> $HOME/.bashrc
 RUN echo 'if [ -d "$HOME/.local/bin" ]; then' >> $HOME/.bashrc
