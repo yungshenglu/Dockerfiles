@@ -44,3 +44,8 @@ This repository is using for building Movidius environment on Ubuntu Linux 16.04
 ## Contributor
 
 * [David Lu](https://github.com/yungshenglu)
+
+---
+## License
+
+[GNU General Public License v3.0](../LICENSE)

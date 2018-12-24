@@ -48,3 +48,8 @@ This Dockerfile is used to build Ubuntu Linux environment on Docker container.
 ## Contributor
 
 * [David Lu](https://github.com/yungshenglu)
+
+---
+## License
+
+[GNU General Public License v3.0](../LICENSE)

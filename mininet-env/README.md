@@ -51,3 +51,8 @@ This Dockerfile is used to build Ubuntu Linux environment with **Mininet** on Do
 ## Contributor
 
 * [David Lu](https://github.com/yungshenglu)
+
+---
+## License
+
+[GNU General Public License v3.0](../LICENSE)
