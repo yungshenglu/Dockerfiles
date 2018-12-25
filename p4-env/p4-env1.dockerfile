@@ -25,4 +25,4 @@ CMD ["/bin/bash", "-D"]
 
 # Clone the P4 repository from GitHub
 RUN git clone https://github.com/p4lang/tutorials /root/p4-tutorials
-#RUN git clone https://github.com/kevinbird61/p4-researching.git /root/p4-researching
+RUN git clone https://github.com/kevinbird61/p4-researching.git /root/p4-researching
