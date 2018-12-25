@@ -25,7 +25,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 EXPOSE 22
 
 # Set the entrypoint
-CMD ["/bin/bash", "-D"]
+CMD ["/usr/sbin/sshd", "-D"]
 
 # Clone the P4 repository from GitHub
 RUN git clone https://github.com/p4lang/tutorials /root/p4-tutorials
