@@ -1,4 +1,4 @@
-# Download base image from yungshenglu/ubuntu-env:16.04
+# Download base image
 FROM yungshenglu/ubuntu-env:16.04
 
 # Update software repository
