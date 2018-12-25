@@ -1,3 +1,4 @@
+# Download base image
 FROM ubuntu:16.04
 
 # Update software repository
@@ -7,8 +8,7 @@ RUN apt-get update
 RUN apt-get install -y net-tools iputils-ping git vim curl wget tmux sudo tcpdump iperf3
 
 # Install Python
-RUN apt-get -qqy install python-pip python-dev
-RUN export LC_ALL=C
+RUN apt-get -qqy install python-pip python-dev openssh-server
 
 # Install Powerline
 RUN pip install --user git+git://github.com/Lokaltog/powerline
@@ -22,9 +22,8 @@ RUN echo 'if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/p
 RUN echo '    source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh' >> $HOME/.bashrc
 RUN echo 'fi' >> $HOME/.bashrc
 
-# Install openssh-server
-RUN apt-get install -y openssh-server && \
-    mkdir /var/run/sshd
+# Create a directory for SSH daemon
+RUN mkdir /var/run/sshd
 
 # Assign password to create image
 RUN echo 'root:1111' | chpasswd
@@ -33,8 +32,13 @@ RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/s
 # SSH login
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
+# Set the envionment variables
 ENV NOTVISIBLE "in users profile"
+ENV export LC_ALL=C
 RUN echo "export VISIBLE=now" >> /etc/profile
 
+# Set the container listens on the specified ports at runtime 
 EXPOSE 22
+
+# Set the entrypoint
 CMD ["/usr/sbin/sshd", "-D"]
