@@ -12,6 +12,9 @@ This repository is used to store my own Dockerfiles.
         * `2.2.1` - Mininet 2.2.1
     * [ryu-env](https://hub.docker.com/r/yungshenglu/ryu-env) - Ryu SDN on Ubuntu Linux 16.04 LTS (64-bit)
         * `3.27` - Ryu 3.27
+    * [p4-env](https://cloud.docker.com/repository/docker/yungshenglu/p4-env) - P4 on Ubuntu Linux 16.04 LTS (64-bit)
+        * `1.0` - P4 1.0
+        * `2.0` - P4 2.0
 * **Building**
     * [ncsdk-env]() - Intel® Movidius™ Neural Compute SDK (NCSDK) on Ubuntu Linux 16.04 LTS (64-bit)
         * `v2` - Intel® Movidius™ NCSDK v2
@@ -35,6 +38,15 @@ This repository is used to store my own Dockerfiles.
     # Command format:
     $ ./main.sh remove <IMAGE_NAME>
     ```
+4. How to login to your Docker container via SSH service?
+    * For Linux / MacOS
+        ```bash
+        # Open the terminal
+        $ ssh -p <PORT> root@0.0.0.0
+        root@0.0.0.0's password: 1111
+        ```
+    * For Windows
+        * You can use [PieTTY](https://sites.google.com/view/pietty-project) to login via SSH service!
 
 ---
 ## Contributing
@@ -45,6 +57,7 @@ To know how to contribute this repository, please refer to this [document](CONTR
 ## Contributor
 
 * [David Lu](https://github.com/yungshenglu)
+* [Kevin Cyu](https://github.com/kevinbird61)
 
 ---
 ## License
