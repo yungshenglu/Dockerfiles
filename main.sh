@@ -17,9 +17,9 @@ function build {
     echo "[INFO] External port: $3"
     # Build the image from Dockerfile
     docker build -f $1 -t $2 .
-    # Build the container named ubuntu-env_c from the image named ubuntu-env
+    # Build the container from the Docker image
     docker run -d -p $3:22 --privileged --name $2"_c" $2 > /dev/null
-    # List port 22 mapping on ubuntu-env_c
+    # List port 22 mapping on the Docker container
     docker port $2"_c" 22
 }
 
@@ -33,9 +33,9 @@ function run {
     fi
 
     echo "[INFO] Run Docker container named $1 on port $2"
-    # build from existed image
+    # Build the container from the Docker image
     docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --name $1"_c" $1 > /dev/null
-    # find which port mapping to 22
+    # List port 22 mapping on the Docker container
     docker port $1"_c" 22
 }
 
@@ -48,13 +48,13 @@ function clean {
     fi
 
     echo "[INFO] Stop and remove the container named $1"
-    # Stop and remove container
+    # Stop and remove the Docker container
     docker container stop $1
     docker container rm $1
 }
 
 function remove {
-    # $1: the name of docker image
+    # $1: the name of the Docker image
     if [ $# -lt 1 ]; then
         echo "[ERROR] The format of command is WRONG"
         echo "[INFO] ./main.sh remove <IMAGE_NAME>"
@@ -62,7 +62,7 @@ function remove {
     fi
 
     echo "[INFO] Remove the Docker image named $1"
-    # Remove the docker image
+    # Remove the Docker image
     docker image rm $1
 }
 
