@@ -5,22 +5,24 @@ This repository is using for building Movidius environment on Ubuntu Linux 16.04
 ---
 ## Usage
 
-1. Clone the repository [movidius/ncsdk](https://github.com/movidius/ncsdk) on the branch `ncsdk2`
+1. Before using this Dockerfile, make sure you have already installed Docker on your machine.
+    * [Docker CE Installation](https://docs.docker.com/install)
+2. Clone the repository [movidius/ncsdk](https://github.com/movidius/ncsdk) on the branch `ncsdk2`
     ```bash
     # Make sure your current directory is you want
     $ git clone -b ncsdk2 https://github.com/movidius/ncsdk.git
     ```
-2. Copy the Dockerfile into the directory `./ncsdk/extras/docker/` and name it as `yslu.Dockerfile`
+3. Copy the Dockerfile into the directory `./ncsdk/extras/docker/` and name it as `yslu.Dockerfile`
     ```bash
     # Make sure your current directory is "./ncsdk-env/" of this repository
     $ cp Dockerfile <PATH_TO_NCSDK/EXTRAS/DOCKER>/yslu.Dockerfile
     ```
-3. Build the image from the Dockerfile (take few minutes)
+4. Build the image from the Dockerfile (take few minutes)
     ```bash
     # Make sure your current directory is "./ncsdk/"
     $ docker build -t ncsdk-env -f ./extras/docker/yslu.Dockerfile .
     ```
-4. Create and run a privileged the Docker container from the built image (take few minutes)
+5. Create and run a privileged the Docker container from the built image (take few minutes)
     ```bash
     # Make sure your current directory is "./ncsdk/"
     $ docker run --net=host --privileged -v /dev/:/dev --name ncsdk-env_c -i -t ncsdk-env /bin/bash
