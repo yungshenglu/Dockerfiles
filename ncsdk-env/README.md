@@ -22,7 +22,7 @@ This Dockerfile is used to build **Intel® Movidius™ NCSDK environment** on Ub
     # Make sure your current directory is "./ncsdk/"
     $ docker build -t ncsdk-env -f ./extras/docker/yslu.Dockerfile .
     ```
-5. Create and run a privileged the Docker container from the built image (take few minutes)
+5. Create and run a privileged the Docker container from the built image
     ```bash
     # Make sure your current directory is "./ncsdk/"
     $ docker run --net=host --privileged -v /dev/:/dev --name ncsdk-env_c -i -t ncsdk-env /bin/bash
