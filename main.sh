@@ -15,7 +15,7 @@ function build {
     echo "[INFO] Dockerfile path: $1"
     echo "[INFO] Docker image: $2"
     echo "[INFO] External port: $3"
-    # Build the image from Dockerfile
+    # Build the image from the Dockerfile
     docker build -f $1 -t $2 .
     # Build the container from the Docker image
     docker run -d -p $3:22 --privileged --name $2"_c" $2 > /dev/null
