@@ -25,6 +25,12 @@ This repository is used to store my own Dockerfiles.
     * [`ubuntu-env:16.04`](ubuntu-env/)
     * [`mininet-env:2.2.1`](mininet-env/)
     * [`ryu-env:3.27`](ryu-env/)
+    * [`p4-env`](p4-env/)
+        * `p4-env:2.0` (recommended)
+        * `p4-env:1.0`
+    * [`ncsdk-env:v2`](ncsdk-env/)*
+        * `ncsdk-env` has some specific instructions, please follow [here](ncsdk-env/README.md).
+        * Do **NOT** use the following instructions to build the Docker container for `ncsdk-env`
 2. How to remove the Docker container? (optional)
     ```bash
     # Make sure your current directory is in "./"
