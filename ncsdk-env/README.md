@@ -1,6 +1,6 @@
 # ncsdk-env
 
-This repository is used to build **Intel® Movidius™ NCSDK environment** on Ubuntu Linux 16.04 LTS (only supported).
+This Dockerfile is used to build **Intel® Movidius™ NCSDK environment** on Ubuntu Linux 16.04 LTS (only supported).
 
 ---
 ## Usage
