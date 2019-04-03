@@ -65,6 +65,8 @@ This repository is used to store my own Dockerfiles.
 
 * [David Lu](https://github.com/yungshenglu)
 * [Kevin Cyu](https://github.com/kevinbird61)
+* [Willy Huang](https://github.com/ChenFaHaung)
+* [Peter Lin](https://github.com/ms0248717)
 
 ---
 ## License
