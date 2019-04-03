@@ -57,12 +57,9 @@ This repository is used to store my own Dockerfiles.
         * You can use [PieTTY](https://sites.google.com/view/pietty-project) to login via SSH service!
 
 ---
-## Contributing
-
-To know how to contribute this repository, please refer to this [document](CONTRIBUTING.md) first. Thanks for your cooperation.
-
----
 ## Contributor
+
+> **NOTICE:** You can follow the contributing process [CONTRIBUTING.md](CONTRIBUTING.md) to join me. I am very welcome any issue!
 
 * [David Lu](https://github.com/yungshenglu)
 * [Kevin Cyu](https://github.com/kevinbird61)
