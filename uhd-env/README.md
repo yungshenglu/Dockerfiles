@@ -1,6 +1,6 @@
 # uhd-env
 
-This Dockerfile is used to build [USRP Hardware Driver (UHD™) Software](https://github.com/EttusResearch/uhd/tree/UHD-3.9.LTS) environment on Docker container.
+This Dockerfile is used to build a [USRP Hardware Driver (UHD™) Software](https://github.com/EttusResearch/uhd/tree/UHD-3.9.LTS) environment on Docker container.
 
 ---
 ## Usages

@@ -1,6 +1,6 @@
 # p4-env
 
-This Dockerfile is used to build Ubuntu Linux environment with **P4** on Docker container.
+This Dockerfile is used to build a Ubuntu Linux environment with [P4](https://p4.org/) on Docker container.
 
 ---
 ## Usages
@@ -61,6 +61,14 @@ This Dockerfile is used to build Ubuntu Linux environment with **P4** on Docker 
     * wget
     * powerline
     * tmux
+
+---
+## Refereneces
+
+* [P4 Language](https://p4.org/)
+* [GitHub - P4 Runtime](https://github.com/p4lang/p4runtime)
+* [GitHub - P4_16 Compiler](https://github.com/p4lang/p4c)
+* [GitHub - P4 Behavioral Model](https://github.com/p4lang/behavioral-model)
 
 ---
 ## Contributor

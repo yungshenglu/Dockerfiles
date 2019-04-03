@@ -1,6 +1,6 @@
 # mininet-env
 
-This Dockerfile is used to build Ubuntu Linux environment with **Mininet** on Docker container.
+This Dockerfile is used to build a Ubuntu Linux environment with [Mininet](http://mininet.org/) on Docker container.
 
 ---
 ## Usages
@@ -46,6 +46,12 @@ This Dockerfile is used to build Ubuntu Linux environment with **Mininet** on Do
     * powerline
     * tmux
     * mininet
+
+---
+## References
+
+* [Mininet](http://mininet.org/)
+* [GitHub - Mininet](https://github.com/mininet/mininet)
 
 ---
 ## Contributor

@@ -1,6 +1,6 @@
 # ncsdk-env
 
-This Dockerfile is used to build **Intel® Movidius™ NCSDK environment** on Ubuntu Linux 16.04 LTS (only supported).
+This Dockerfile is used to build a [Intel® Movidius™ NCSDK environment](https://movidius.github.io/ncsdk/index.html) on Ubuntu Linux 16.04 LTS (only supported).
 
 ---
 ## Usages
@@ -68,6 +68,13 @@ This Dockerfile is used to build **Intel® Movidius™ NCSDK environment** on Ub
     * python-pip
     * powerline
     * tmux
+
+---
+## References
+
+* [Intel® Movidius™ NCSDK environment](https://movidius.github.io/ncsdk/index.html)
+* [GitHub - Intel® Movidius™ NCSDK](https://github.com/movidius/ncsdk/)
+* [GitHub - Examples for the Movidius NCS](https://github.com/movidius/ncappzoo)
 
 ---
 ## Contributor

@@ -1,6 +1,6 @@
 # ryu-env
 
-This Dockerfile is used to build Ubuntu Linux environment with **Ryu** on Docker container.
+This Dockerfile is used to build a Ubuntu Linux environment with [Ryu SDN Framework](https://osrg.github.io/ryu/) on Docker container.
 
 ---
 ## Usages
@@ -46,7 +46,14 @@ This Dockerfile is used to build Ubuntu Linux environment with **Ryu** on Docker
     * powerline
     * tmux
     * mininet
-    * ryu·
+    * ryu
+
+---
+## References
+
+* [Ryu SDN Framework](https://osrg.github.io/ryu/)
+* [Ryu SDN Framework Tutorial](https://ryu.readthedocs.io/en/latest/getting_started.html)
+* [GitHub - Ryu SDN Framework](https://github.com/osrg/ryu)
 
 ---
 ## Contributor
