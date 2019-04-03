@@ -5,10 +5,10 @@ FROM ubuntu:16.04
 RUN apt-get update
 
 # Install software repository
-RUN apt-get install -y net-tools iputils-ping git vim curl wget tmux sudo tcpdump iperf3
+RUN apt-get install -y net-tools iputils-ping git vim curl wget tmux sudo tcpdump iperf3 openssh-server
 
 # Install Python
-RUN apt-get -qqy install python-pip python-dev openssh-server
+RUN apt-get -qqy install python-pip python-dev
 
 # Install Powerline
 RUN pip install --user git+git://github.com/Lokaltog/powerline

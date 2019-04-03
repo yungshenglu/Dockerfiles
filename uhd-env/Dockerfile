@@ -1,25 +1,57 @@
 # Download base image
-FROM ubuntu:16.04
+FROM yungshenglu/ubuntu-env:16.04
 
 # Update software repository
 RUN apt-get update
 
 # Install software repository
 RUN apt-get install -y  \
-    net-tools \
-    iputils-ping \
-    git \
-    vim \
-    curl \
-    wget \
-    tmux \
-    sudo \
-    tcpdump \
-    iperf3 \
-    swig cmake doxygen build-essential libboost-all-dev libtool libusb-1.0-0 libusb-1.0-0-dev libudev-dev libncurses5-dev libfftw3-bin libfftw3-dev libfftw3-doc libcppunit-1.13-0v5 libcppunit-dev libcppunit-doc ncurses-bin cpufrequtils python-numpy python-numpy-doc python-numpy-dbg python-scipy python-docutils qt4-bin-dbg qt4-default qt4-doc libqt4-dev libqt4-dev-bin python-qt4 python-qt4-dbg python-qt4-dev python-qt4-doc python-qt4-doc libqwt6abi1 libfftw3-bin libfftw3-dev libfftw3-doc ncurses-bin libncurses5 libncurses5-dev libncurses5-dbg libfontconfig1-dev libxrender-dev libpulse-dev swig g++ automake autoconf libtool python-dev libfftw3-dev libcppunit-dev libboost-all-dev libusb-dev libusb-1.0-0-dev fort77 libsdl1.2-dev python-wxgtk3.0 git-core libqt4-dev python-numpy ccache python-opengl libgsl-dev python-cheetah python-mako python-lxml doxygen qt4-default qt4-dev-tools libusb-1.0-0-dev libqwt5-qt4-dev libqwtplot3d-qt4-dev pyqt4-dev-tools python-qwt5-qt4 cmake git-core wget libxi-dev gtk2-engines-pixbuf r-base-dev python-tk liborc-0.4-0 liborc-0.4-dev libasound2-dev python-gtk2 libzmq-dev libzmq1 python-requests python-sphinx libcomedi-dev python-zmq
+    g++ \
+    git-core \
+    cmake automake autoconf ccache \
+    swig \
+    doxygen \
+    cpufrequtils \
+    build-essential \
+    fort77 \
+    gtk2-engines-pixbuf \
+    ncurses-bin libncurses5 libncurses5-dev libncurses5-dbg \
+    qt4-default qt4-dev-tools qt4-bin-dbg qt4-doc pyqt4-dev-tools libqt4-dev libqt4-dev-bin \
+    r-base-dev \
+    libasound2-dev \
+    libboost-all-dev \
+    libcomedi-dev \
+    libcppunit-1.13-0v5 libcppunit-dev libcppunit-doc \
+    libfftw3-bin libfftw3-dev libfftw3-doc \
+    libfontconfig1-dev \
+    libgsl-dev \
+    liborc-0.4-0 liborc-0.4-dev \
+    libpulse-dev \
+    libqwt5-qt4-dev libqwt6abi1 libqwtplot3d-qt4-dev \
+    libsdl1.2-dev \
+    libtool \
+    libudev-dev \
+    libusb-dev libusb-1.0-0 libusb-1.0-0-dev \
+    libxi-dev \
+    libxrender-dev \
+    libzmq-dev libzmq1
 
-# Install Python
-RUN apt-get -qqy install python-pip python-dev openssh-server
+# Install Python and necessary packages
+RUN apt-get -qqy install \
+    python-numpy python-numpy-doc python-numpy-dbg \
+    python-scipy \
+    python-docutils \
+    python-qt4 python-qt4-dev python-qt4-dbg python-qt4-doc \
+    python-wxgtk3.0 \
+    python-opengl \
+    python-cheetah \
+    python-mako \
+    python-lxml \
+    python-qwt5-qt4 \
+    python-tk python-gtk2 \
+    python-requests \
+    python-sphinx \
+    python-zmq
 
 ### Install USRP Hardware Driver (UHD™) Software ###
 # Reconfigure Default Shell
