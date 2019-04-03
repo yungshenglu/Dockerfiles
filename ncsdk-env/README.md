@@ -3,7 +3,7 @@
 This Dockerfile is used to build **Intel® Movidius™ NCSDK environment** on Ubuntu Linux 16.04 LTS (only supported).
 
 ---
-## Usage
+## Usages
 
 1. Before using this Dockerfile, make sure you have already installed Docker on your machine.
     * [Docker CE Installation](https://docs.docker.com/install)

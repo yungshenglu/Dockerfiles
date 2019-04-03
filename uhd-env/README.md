@@ -3,7 +3,7 @@
 This Dockerfile is used to build [USRP Hardware Driver (UHD™) Software](https://github.com/EttusResearch/uhd/tree/UHD-3.9.LTS) environment on Docker container.
 
 ---
-## Usage
+## Usages
 
 > **NOTICE:** We provided a script file `main.sh` for you to help you to build the Docker container easily. The script file `main.sh` can be downloaded from [here](https://github.com/yungshenglu/Dockerfiles)!
 

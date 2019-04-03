@@ -3,7 +3,7 @@
 This Dockerfile is used to build Ubuntu Linux environment on Docker container.
 
 ---
-## Usage
+## Usages
 
 > **NOTICE:** We provided a script file `main.sh` for you to help you to build the Docker container easily. The script file `main.sh` can be downloaded from [here](https://github.com/yungshenglu/Dockerfiles)!
 
