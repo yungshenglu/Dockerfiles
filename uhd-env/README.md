@@ -1,11 +1,11 @@
 # uhd-env
 
-This Dockerfile is used to build a [USRP Hardware Driver (UHD™) Software](https://github.com/EttusResearch/uhd/tree/UHD-3.9.LTS) environment on Docker container.
+This Dockerfile is used to build a [USRP Hardware Driver (UHD™) Software](https://github.com/EttusResearch/uhd/tree/UHD-3.9.LTS) environment on the Docker container.
 
 ---
 ## Usages
 
-> **NOTICE:** We provided a script file `main.sh` for you to help you to build the Docker container easily. The script file `main.sh` can be downloaded from [here](https://github.com/yungshenglu/Dockerfiles)!
+> **NOTICE:** We provided a script file [main.sh](../main.sh) for you to help you to build the Docker container easily.
 
 1. Before using this Dockerfile, make sure you have already installed Docker on your machine.
     * [Docker CE Installation](https://docs.docker.com/install)

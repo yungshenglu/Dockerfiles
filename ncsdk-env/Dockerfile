@@ -1,3 +1,5 @@
+LABEL maintainer "David Lu <yungshenglu1994@gmail.com>"
+
 # Download base image
 FROM yungshenglu/ubuntu-env:16.04
 
