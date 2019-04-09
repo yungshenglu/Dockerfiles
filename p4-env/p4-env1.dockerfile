@@ -1,3 +1,5 @@
+LABEL maintainer "David Lu <yungshenglu1994@gmail.com>"
+
 # Download base image
 FROM yungshenglu/p4-env:1.0
 
