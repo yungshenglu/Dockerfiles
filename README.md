@@ -109,6 +109,7 @@ nctu-thesis-template
 ├── Tools/                          # * 相關小工具 (不需更動)
 │   └── ...
 ├── .gitignore                      # 檔案忽略清單 (不需更動)
+├── CHANGELOG.md                    # 紀錄文件：本專案修改記錄 (不需更動)
 ├── CONTRIBUTING.md                 # 說明文件：如何貢獻本專案 (不需更動)
 ├── GNUmakefile                     # 編譯論文檔案所用 (不需更動)
 ├── LICENSE                         # 專案授權 (不需更動)
