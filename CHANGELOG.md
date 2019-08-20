@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v1.0.0 - 20190809
+## v1.0.0
 
 ### Added
 
@@ -8,6 +8,7 @@
 * 新增起始頁 (Start Page) 於標題頁前 (圖書館上傳版本規定)
 * 新增表目錄 (List of Tables)
 * 新增「論文輸出選項 (output option)」：送印 (print) / 上傳 (upload)
+* 新增 `CHANGELOG.md`
 
 ### Changed
 
