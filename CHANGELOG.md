@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v1.0
+## [v1.0](https://gitlab.com/nsslab/thesis/nctu-thesis-template/tree/v1.0)
 
 ### Added
 
