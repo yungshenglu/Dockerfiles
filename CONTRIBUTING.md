@@ -8,7 +8,7 @@ Thanks for contributing this repository. The following steps are show how to joi
 1. Fork this repository and clone the repository you forked
     ```bash
     # Clone your fork of the repo into the current directory
-    $ git clone https://github.com/<YOUR_USERNAME>/nctu-thesis-template
+    $ git clone https://gitlab.com/<YOUR_USERNAME>/nctu-thesis-template
     # Navigate to the newly cloned directory
     $ cd nctu-thesis-template
     ```
@@ -22,7 +22,7 @@ Thanks for contributing this repository. The following steps are show how to joi
 3. Assign the original repository to a remote called `upstream` and update
     ```bash
     # Assign the original repo to a remote called "upstream"
-    $ git remote add upstream https://github.com/yungshenglu/nctu-thesis-template
+    $ git remote add upstream https://gitlab.com/nsslab/thesis/nctu-thesis-template
     # Update to remote repository
     $ git remote update
     ```
