@@ -173,7 +173,7 @@
 % En­hanced sup­port for graph­ics
 \usepackage{graphicx}
 % Setting the path of figures
-\graphicspath{{./Figures/}}
+\graphicspath{{Figures/}}
 % For in­clude En­cap­su­lated PostScript
 \usepackage{epsfig}
 % For con­vert EPS to PDF us­ing Ghostscript
