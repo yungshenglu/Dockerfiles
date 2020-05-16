@@ -9,6 +9,19 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 % Example of adding table and inserting figure
 \afterpage{
+	\vspace*{\fill}{
+		\begin{figure}[ht!]
+			\centering
+			\epsfig{
+				width=2.5in,
+				file=nsslab.eps
+			}
+			\caption{Figure Caption}
+			\label{fig:fig5}
+		\end{figure}
+	}
+	\vspace*{\fill}
+
     \vspace*{\fill}{
 		\begin{table}[ht!]
 			\begin{center}
