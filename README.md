@@ -16,19 +16,21 @@
 * Ubuntu Linux
     1. Install the package XeLatex
         ```bash
-        $ sudo apt-get install -y texlive-xetex
+        $ sudo apt-get install -y texlive-full
         ```
-    2. Install the package [texlive-science](http://packages.ubuntu.com/oneiric/texlive-science) which contains `algorithm2e` (the same package also contains algorithmicx).
+    2. Install and reload necessary fonts
         ```bash
-        $ sudo apt-get install -y texlive-science
-        ```
-    3. Install and reload necessary fonts
-        ```bash
-        $ sudo apt-get install -y texlive-fonts-extra fonts-arphic-ukai fonts-arphic-uming
+        $ sudo apt-get install -y texlive-fonts-extra fonts-arphic-ukai fonts-arphic-uming ttf-mscorefonts-installer
         $ sudo fc-cache
         ```
 * Online LaTeX Service
     * [Overleaf](https://www.overleaf.com)
+* Docker Image
+    1. Install [Docker](https://www.docker.com/get-started) on your machine
+    2. Pull our Docker image on your machine
+        ```bash
+        $ docker pull
+        ```
 
 ### Usages
 
