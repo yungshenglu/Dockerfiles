@@ -1,4 +1,4 @@
-LABEL maintainer "David Lu <yungshenglu1994@gmail.com>"
+#LABEL maintainer "David Lu <yungshenglu1994@gmail.com>"
 
 # Download base image
 FROM ubuntu:16.04
@@ -7,7 +7,7 @@ FROM ubuntu:16.04
 RUN apt-get update
 
 # Install software repository
-RUN apt-get install -y vim git sudo build-essential texlive-full texlive-fonts-extra fonts-arphic-ukai fonts-arphic-uming ttf-mscorefonts-installer
+RUN apt-get install -y vim git sudo build-essential texlive-full texlive-fonts-extra fonts-arphic-ukai fonts-arphic-uming
 
 RUN fc-cache
 
