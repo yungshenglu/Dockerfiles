@@ -28,13 +28,13 @@ function run {
     # $2: the external port
     if [ $# -lt 2 ]; then
         echo "[ERROR] The format of command is WRONG"
-        echo "[INFO] ./main.sh run <CONTAINER_NAME>"
+        echo "[INFO] ./main.sh run <IMAGE_NAME>"
         exit
     fi
 
-    echo "[INFO] Run Docker container named $1 on port $2"
+    echo "[INFO] Run Docker container named $1_c on port $2"
     # Build the container from the Docker image
-    docker run -d -p $2:22 -v /etc/apt/apt.conf:/etc/apt/apt.conf:ro -v /dev:/dev:shared -v /media/data2/NCS/:/media/data2/NCS/ --name $1"_c" $1 > /dev/null
+    docker run -d -p $2:22 --privileged --name $1"_c" $1 > /dev/null
     # List port 22 mapping on the Docker container
     docker port $1"_c" 22
 }

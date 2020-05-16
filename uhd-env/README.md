@@ -108,6 +108,8 @@ This Dockerfile is used to build a [USRP Hardware Driver (UHD™) Software](http
 ## Contributor
 
 * [David Lu](https://github.com/yungshenglu)
+* [Willy Huang](https://github.com/ChenFaHaung)
+* [Peter Lin](https://github.com/ms0248717)
 
 ---
 ## License
