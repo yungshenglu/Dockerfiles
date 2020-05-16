@@ -3,7 +3,9 @@
 此專案為「國立交通大學」碩博士論文模板。
 
 ---
-## Installation
+## Description
+
+### Prerequisite
 
 > 關於安裝資訊：https://www.latex-project.org/get/#tex-distributions
 
@@ -11,13 +13,24 @@
     * 安裝 [MiKTeX](https://miktex.org/)
 * MacOS
     * 安裝 [MacTeX](http://www.tug.org/mactex/)
-* Linux
-    * 安裝 [TeXLive](https://www.tug.org/texlive/)
+* Ubuntu Linux
+    1. Install the package XeLatex
+        ```bash
+        $ sudo apt-get install -y texlive-xetex
+        ```
+    2. Install the package [texlive-science](http://packages.ubuntu.com/oneiric/texlive-science) which contains `algorithm2e` (the same package also contains algorithmicx).
+        ```bash
+        $ sudo apt-get install -y texlive-science
+        ```
+    3. Install and reload necessary fonts
+        ```bash
+        $ sudo apt-get install -y texlive-fonts-extra fonts-arphic-ukai fonts-arphic-uming
+        $ sudo fc-cache
+        ```
 * Online LaTeX Service
     * [Overleaf](https://www.overleaf.com)
 
----
-## Usage
+### Usages
 
 0. 下載此專案。
 1. 執行以下指令進行編譯。
@@ -61,8 +74,7 @@
             $ make
             ```
 
----
-## Description
+### File Structure
 
 ```bash
 # In alphabetical order

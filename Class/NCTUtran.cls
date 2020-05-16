@@ -125,7 +125,7 @@
 %----------------------------------------------------------------------
 
 % For chinese typing
-\usepackage[BoldFont, SlantFont, CJKchecksingle, CJKmath=true]{xeCJK}
+\usepackage[BoldFont,SlantFont,CJKchecksingle,CJKmath=true]{xeCJK}
 % For font selection
 \usepackage{fontspec}
 % Determine currently running platform/OS
@@ -139,7 +139,7 @@
 % For Watermark
 \usepackage{eso-pic}
 % For the index
-\usepackage[xetex, hidelinks]{hyperref}
+\usepackage[xetex,hidelinks]{hyperref}
 % For setting the maring of page
 \usepackage{geometry}		
 % For clearing the page number in empty even pages 
@@ -164,7 +164,7 @@
 %\usepackage{caption}
 %\usepackage[labelformat=simple]{subcaption}
 % Formatting the numbering of algorithm label
-\usepackage[ruled, vlined]{algorithm2e}
+\usepackage[ruled,vlined]{algorithm2e}
 % AMS math­e­mat­i­cal fa­cil­i­ties
 \usepackage{amsmath}
 \usepackage{amssymb}
